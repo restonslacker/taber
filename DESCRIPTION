@@ -4,7 +4,8 @@ Title: Split and Recombine Your Data
 Version: 0.0.1
 Date: 2015-07-02
 Authors@R: person("Seth", "Wenchel", email = "seth@wenchel.com", role = c("aut", "cre", "cph"))
-Description: Sometimes you need to split your data and work on the two chunks independantly before bringing them back together. 'Taber' allows you to do just that
+Description: Sometimes you need to split your data and work on the two chunks independently before bringing them back together.
+  'Taber' allows you to do just that.
 License: BSD_3_clause
 LazyData: TRUE
 Imports: magrittr, dplyr
