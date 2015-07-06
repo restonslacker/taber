@@ -4,6 +4,17 @@
 
 `taber` is for people who use `dplyr` and `magrittr`. If your workflow is heavy on pipes, sometimes you need to do different operations on different parts of the data, sometimes that's cleaning or transforming the data. In my own work I deal with flight data and I need to do one set of operations on arrival data and another on departure data but all of it has the same format so I'd like to keep it together as one dataset. 
 
+## Installation
+
+```{r, eval=FLASE}
+# taber is available on CRAN
+install.packages("taber")
+
+# the development version is available from github and can be installed most easily with devtools
+devtools::install_github("restonslacker/taber")
+```
+
+
 ## About the name
 
 Taber is named for George Lindley Taber, noted American horticulturist and the eponym for my mother's favorite azalea. 
