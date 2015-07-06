@@ -1,7 +1,9 @@
-# taber
+# _A multiplexer for you data pipelines_
 
-Taber is for people who use dplyr and magrittr. If your workflow is heavy on pipes, sometimes you need to do different operations on different parts of the data, sometimes that's cleaning or transforming the data. In my own work I deal with flight data and I need to do one set of operations on arrival data and another on departure data but all of it has the same format so I'd like to keep it together as one dataset. 
+## taber
 
-# About the name
+`taber` is for people who use `dplyr` and `magrittr`. If your workflow is heavy on pipes, sometimes you need to do different operations on different parts of the data, sometimes that's cleaning or transforming the data. In my own work I deal with flight data and I need to do one set of operations on arrival data and another on departure data but all of it has the same format so I'd like to keep it together as one dataset. 
+
+## About the name
 
 Taber is named for George Lindley Taber, noted American horticulturist and the eponym for my mother's favorite azalea. 
