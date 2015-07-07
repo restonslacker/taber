@@ -7,7 +7,7 @@
 scion(.data, ..., false_fun, false_name, false_env)
 }
 \arguments{
-\item{.data}{A tbl or soomething that can be coerced into one}
+\item{.data}{A tbl or something that can be coerced into one}
 
 \item{...}{conditions that will be passed to dplyr::filter}
 

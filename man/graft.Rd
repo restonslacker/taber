@@ -7,11 +7,11 @@
 graft(.data, combine_fun, data2)
 }
 \arguments{
-\item{.data}{A tbl or soomething that can be coerced into one}
+\item{.data}{A tbl or something that can be coerced into one}
 
-\item{combine_fun}{optional, a function that will combbine two tbls such as full_join or bind_rows}
+\item{combine_fun}{optional, A function that will combine two tbls such as full_join or bind_rows}
 
-\item{data2}{A tbl or soomething that can be coerced into one}
+\item{data2}{A tbl or something that can be coerced into one}
 }
 \value{
 A single tbl object
@@ -22,11 +22,13 @@ Graft one dataset onto another
 \details{
 Graft requires two data objects.  The first must be provided by the user. The second can either be passed
 in or automatically pulled off of the package's internal stack of scions. These will be combined accoring to the following rules in order:
-* If either dataset has zero rows, the other dataset will be returned.
-* If combine_fun is specifed, combine_fun(.data, data2) will be called
-* If all column names match, a row bind will occur
-* If at least some column names match, a full join will occur
-* If both have the same number of rows a column bind will be performed
+\itemize{
+  \item If either dataset has zero rows, the other dataset will be returned.
+  \item If combine_fun is specifed, \code{combine_fun(.data, data2)} will be called
+  \item If all column names match, a row bind will occur
+  \item If at least some column names match, a full join will occur
+  \item If both have the same number of rows a column bind will be performed
+ }
 }
 \author{
 Seth Wenchel
