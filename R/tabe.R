@@ -62,9 +62,9 @@ graft <- function(.data, combine_fun, data2){
   if(missing(data2))
     data2 <- .pop()
 
-  if(nrow(.data)==0)
+  if(length(.data)==0)
     return(data2)
-  if(nrow(data2)==0)
+  if(length(data2)==0)
     return(.data)
   if(!missing(combine_fun))
     return(combine_fun(.data,data2))
@@ -79,6 +79,14 @@ graft <- function(.data, combine_fun, data2){
   # same # columns & names <=> rbind
   # same # rows & no names match <=> cbind
   # at least one column names matches <=> full_join
+}
+
+#' Reset the stack so that objects left from previous pipelines will not cause issues
+#' @export
+clear_stack <- function(){
+  vars <-  ls(envir = .pkgenv)
+  rm(list = vars[which(substr(vars, 1,10)=="stack_obj_")], envir = .pkgenv)
+  assign("objects_on_stack", 0,.pkgenv)
 }
 
 
