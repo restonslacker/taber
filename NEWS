@@ -1,0 +1,12 @@
+taber 0.1.0
+================
+
+* added clear_stack method to reset internal stack
+* added ability to place named scions in the package environment
+* added NEWS file
+* documentation fixes
+
+taber 0.0.1
+================
+
+* initial CRAN release

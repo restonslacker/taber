@@ -3,11 +3,12 @@
 #' @param  .data A tbl or something that can be coerced into one
 #' @param ... conditions that will be passed to dplyr::filter
 #' @param false_fun A function or functional that will be applied to the data that doesn't pass the supplied filters (the scion)
-#' @param false_name optional, the name of the object to which the scion will be assigned. If specified, false_env must also be specified
-#' @param false_env option, the environment into which the scion will be assigned. If specified, false_name must also be specified
+#' @param false_name optional, the name of the object to which the scion will be assigned.
+#' @param false_env optional, the environment into which the scion will be assigned. If specified, false_name must also be specified.
+#'        If unspecified (default), scions will be placed into the internal package environment.
 #' @return A tbl whose rows have passed the stated conditions
-#' @details .data will be split into two chunks based on the conditions. The scion will be passed through false_fun and then either placed on
-#' the package's internal stack or assigned as specified by false_name and false_env.
+#' @details \code{.data} will be split into two chunks based on the conditions. The scion will be passed through \code{false_fun} and then either placed on
+#' the package's internal stack or assigned as specified by \code{false_name} and \code{false_env}.
 #' @examples
 #' library(dplyr)
 #' aframe <- data.frame(zed = runif(100))
@@ -29,11 +30,11 @@ scion <- function(.data, ..., false_fun, false_name, false_env){
     if(!missing(false_env))
       assign(false_name, falls, envir = false_env)
     else
-      stop("false_name specified but not false_env.  you must specify both or neither")
+      assign(false_name, falls, envir = .pkgenv)
   }
   else
     if(!missing(false_env))
-      stop("false_name specified but not false_env.  you must specify both or neither")
+      stop("false_env specified but not false_name.")
   .push(falls)
   return(tru)
 }

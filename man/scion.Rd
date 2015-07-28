@@ -13,9 +13,10 @@ scion(.data, ..., false_fun, false_name, false_env)
 
 \item{false_fun}{A function or functional that will be applied to the data that doesn't pass the supplied filters (the scion)}
 
-\item{false_name}{optional, the name of the object to which the scion will be assigned. If specified, false_env must also be specified}
+\item{false_name}{optional, the name of the object to which the scion will be assigned.}
 
-\item{false_env}{option, the environment into which the scion will be assigned. If specified, false_name must also be specified}
+\item{false_env}{optional, the environment into which the scion will be assigned. If specified, false_name must also be specified.
+If unspecified (default), scions will be placed into the internal package environment.}
 }
 \value{
 A tbl whose rows have passed the stated conditions
