@@ -3,6 +3,7 @@
 export(clear_stack)
 export(graft)
 export(scion)
+export(stack_view)
 importFrom(dplyr,bind_cols)
 importFrom(dplyr,bind_rows)
 importFrom(dplyr,filter)

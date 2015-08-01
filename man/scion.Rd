@@ -25,8 +25,8 @@ A tbl whose rows have passed the stated conditions
 scion
 }
 \details{
-.data will be split into two chunks based on the conditions. The scion will be passed through false_fun and then either placed on
-the package's internal stack or assigned as specified by false_name and false_env.
+\code{.data} will be split into two chunks based on the conditions. The scion will be passed through \code{false_fun} and then either placed on
+the package's internal stack or assigned as specified by \code{false_name} and \code{false_env}.
 }
 \examples{
 library(dplyr)

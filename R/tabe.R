@@ -84,7 +84,7 @@ graft <- function(.data, combine_fun, data2){
   # at least one column names matches <=> full_join
 }
 
-#' Reset the stack so that objects left from previous pipelines will not cause issues
+#' Remove all objects from the stack by deleting them from memory.
 #' @export
 clear_stack <- function(){
   vars <-  ls(envir = .pkgenv)
@@ -94,8 +94,3 @@ clear_stack <- function(){
 
 
 
-# hark <- . %>% mutate(zed =0)
-#
-# aframe <- data.frame(zed = runif(100))
-#
-# aframe %>% scion(hark, zed >0.5) %>% mutate(zed=1) %>% graft

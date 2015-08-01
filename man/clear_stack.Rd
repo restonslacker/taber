@@ -2,11 +2,11 @@
 % Please edit documentation in R/tabe.R
 \name{clear_stack}
 \alias{clear_stack}
-\title{Reset the stack so that objects left from previous pipelines will not cause issues}
+\title{Remove all objects from the stack by deleting them from memory.}
 \usage{
 clear_stack()
 }
 \description{
-Reset the stack so that objects left from previous pipelines will not cause issues
+Remove all objects from the stack by deleting them from memory.
 }
 
