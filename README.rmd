@@ -18,6 +18,22 @@ install.packages("taber")
 devtools::install_github("restonslacker/taber")
 ```
 
+## Example: Quicksort
+```{r, eval = false}
+qsrt_ <- function(.data){
+  if(length(.data)==0 || nrow(.data)==0 || all(.data$zed==.data$zed[1])){
+    return((.data))
+  }
+
+  .data %>% scion(zed<=zed[1], false_fun=qsrt_ ) %>%
+    scion(zed!=zed[1]) %>%
+    qsrt_ %>%
+    graft %>%
+    graft
+}
+
+data.frame(zed = sample(1:25, 25, FALSE)) %>% qsrt_
+```
 
 ## About the name
 
