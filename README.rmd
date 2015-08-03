@@ -1,3 +1,8 @@
+---
+output: 
+  html_document: 
+    keep_md: yes
+---
 # _A multiplexer for your data pipelines_
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taber)](http://cran.r-project.org/package=taber)
@@ -10,7 +15,7 @@
 
 ## Installation
 
-```{r, eval=FLASE}
+```{r, eval=FALSE}
 # taber is available on CRAN
 install.packages("taber")
 
@@ -19,7 +24,7 @@ devtools::install_github("restonslacker/taber")
 ```
 
 ## Example: Quicksort
-```{r, eval = false}
+```{r, eval=FALSE}
 qsrt_ <- function(.data){
   if(length(.data)==0 || nrow(.data)==0 || all(.data$zed==.data$zed[1])){
     return((.data))

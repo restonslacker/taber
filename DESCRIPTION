@@ -2,7 +2,7 @@ Package: taber
 Type: Package
 Title: Split and Recombine Your Data
 Version: 0.1.0
-Date: 2015-07-07
+Date: 2015-08-03
 Authors@R: person("Seth", "Wenchel", email = "seth@wenchel.com", role = c("aut", "cre", "cph"))
 Description: Sometimes you need to split your data and work on the two chunks independently before bringing them back together. 'Taber' allows you to do that with its two functions.
 License: BSD_3_clause + file LICENSE
