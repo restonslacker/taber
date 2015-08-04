@@ -1,8 +1,4 @@
----
-output: 
-  html_document: 
-    keep_md: yes
----
+
 # _A multiplexer for your data pipelines_
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taber)](http://cran.r-project.org/package=taber)
