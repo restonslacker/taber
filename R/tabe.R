@@ -18,8 +18,7 @@
 #' @export
 #' @title scion
 #' @author Seth Wenchel
-#' @importFrom dplyr filter
-#' @importFrom dplyr setdiff
+#' @importFrom dplyr filter setdiff
 #' @importFrom magrittr %>%
 scion <- function(.data, ..., false_fun, false_name, false_env){
   .data %>% dplyr::filter(...) -> tru
@@ -57,11 +56,15 @@ scion <- function(.data, ..., false_fun, false_name, false_env){
 #' @export
 #' @author Seth Wenchel
 #' @title Graft
-#' @importFrom dplyr bind_rows
-#' @importFrom dplyr bind_cols
-#' @importFrom dplyr intersect
-#' @importFrom dplyr full_join
+#' @importFrom dplyr bind_rows bind_cols intersect full_join
+#' @examples
+#' library(dplyr)
+#' aframe <- data.frame(zed = runif(100))
+#' set_to_zero <- . %>% mutate(zed = 0)
+#' aframe %>% scion(zed >0.5, false_fun=set_to_zero) %>% mutate(zed=1) %>% graft
+#'
 graft <- function(.data, combine_fun, data2){
+  force(.data)
   if(missing(data2))
     data2 <- .pop()
 
@@ -86,6 +89,13 @@ graft <- function(.data, combine_fun, data2){
 
 #' Remove all objects from the stack by deleting them from memory.
 #' @export
+#' @examples
+#' library(dplyr)
+#' aframe <- data.frame(zed = runif(100))
+#' set_to_zero <- . %>% mutate(zed = 0)
+#' aframe %>% scion(zed >0.5, false_fun=set_to_zero) 
+#' clear_stack()
+#'
 clear_stack <- function(){
   vars <-  ls(envir = .pkgenv)
   rm(list = vars[which(substr(vars, 1,10)=="stack_obj_")], envir = .pkgenv)

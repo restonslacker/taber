@@ -1,3 +1,13 @@
+taber 0.1.2
+================
+
+* minor issue with URLs http -> https.
+
+taber 0.1.1
+================
+
+* small update to maintain compatibility with new version of magrittr. Thanks go to Lionel Henry for the bug report and suggested patch.
+
 taber 0.1.0
 ================
 
