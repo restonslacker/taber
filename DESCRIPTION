@@ -10,6 +10,6 @@ Description: Sometimes you need to split your data and work on the two chunks in
 License: BSD_3_clause + file LICENSE
 LazyData: TRUE
 Imports: magrittr, dplyr
-URL: http://github.com/restonslacker/taber
-BugReports: http://github.com/restonslacker/taber/issues
+URL: https://github.com/restonslacker/taber
+BugReports: https://github.com/restonslacker/taber/issues
 RoxygenNote: 7.1.1
